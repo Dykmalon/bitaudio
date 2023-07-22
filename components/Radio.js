@@ -1,6 +1,8 @@
 import React from 'react';
 import { FaPlay, FaPause, FaBackward, FaForward } from "react-icons/fa";
+import { SiBitcoinsv } from "react-icons/si";
 import Menu from './Menu';
+import Wave from './Wave';
 
 export default function Radio() {
     return (
@@ -11,7 +13,8 @@ export default function Radio() {
 
                 <div className="player-input">
                     <div className="logo">
-                        <img src="/assets/logo.png" alt="logo" />
+                        <SiBitcoinsv className='svg-icon'/>
+                        {/* <img src="/assets/logo.png" alt="logo" /> */}
                     </div>
                     <div className="search">
                         <input placeholder='Search Index'></input>
@@ -36,6 +39,7 @@ export default function Radio() {
                             </div>
                             <div className="text-channel">
                                 <span>BLOCK #1 HAS NO INSCRIPTION</span>
+                                <div className='wave-div'><Wave/></div>
                             </div>
                         </div>
 

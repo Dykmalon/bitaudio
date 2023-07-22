@@ -145,12 +145,17 @@ a {
 }
 
 .logo {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 .logo img {
   height: 100%;
+}
+
+.svg-icon{
+  height: 100%;
+  width: 100%;
 }
 
 .search {
@@ -269,11 +274,17 @@ a {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
+  overflow: hidden;
+  position: relative;
 }
 
 .text-channel {
 
   display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .text-channel span {
@@ -496,4 +507,45 @@ section>.marquee {
   .display {
     height: 18vw;
   }
+}
+
+/* wave */
+#bars {
+  /* position: absolute; */
+  /* top: 50%;
+  left: 50%; */
+  height: 14px;
+  width: 180px;
+  /* margin: -30px 0 0 -20px; */
+  transform:scale(2);
+/*   border:solid 1px red; */
+}
+
+.bar {
+  position: absolute;
+  bottom: 0px;
+  height: 3px;
+  width: 1px;
+  background: #f0932b;      
+  animation: sound 0ms -800ms linear infinite alternate;
+  transform: translateY(50%);
+  display: flex;
+  align-items: center;
+}
+
+@keyframes sound {
+    0% {
+       opacity: .35;
+        height: 3px; 
+    }
+    100% {
+        opacity: 1;       
+        height: 28px;        
+    }
+}
+
+.wave-div{
+  position: absolute;
+  bottom: 15px;
+
 }
